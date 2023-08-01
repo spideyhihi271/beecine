@@ -1,99 +1,44 @@
-.detail {
-    height: 100vh;
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+.detail-header {
     width: 100%;
+    position: relative;
     &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
         width: 100%;
-        height: 60%;
-        position: relative;
-        &-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        &-btn {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            width: 70px;
-            height: 70px;
-            color: white;
-            font-size: 2rem;
-            border-radius: 50%;
-            background-color: rgba($color: white, $alpha: 0.5);
-        }
-    }
-    &-info {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 40%;
-        margin: 16px 0;
-        padding: 0 var(--content-sesson-padding);
+        height: 70vh;
+        object-fit: cover;
     }
 }
-.detail-info-side {
-    width: fit-content;
-    margin-right: 16px;
-}
-
-.info-side-avt {
-    height: 270px;
-    width: 200px;
-    object-fit: cover;
-}
-
-.detail-info-main {
-    flex: 1;
+.header-content {
+    position: absolute;
+    left: 0;
+    z-index: 1;
     display: flex;
-}
-.info-movie {
-    width: 50%;
-    color: white;
-    &-name {
-        font-size: 2.5rem;
-    }
-    &-more {
-        display: flex;
-        align-items: center;
-        margin: 8px 0;
-        p {
-            margin-right: 8px;
-        }
-        .genders {
-            display: flex;
-            margin: 0 16px;
-            p {
-                margin-right: 4px;
-            }
-        }
-        .action {
-            padding: 0;
-            color: white;
-            background-color: transparent;
-            font-size: 1.6rem;
-            margin-right: 16px;
-            i {
-                font-size: 2rem;
-                margin-right: 8px;
-            }
-        }
-    }
-    &-description {
-        color: var(--text-color);
-        margin: 16px 0;
+    padding: var(--content-sesson-padding);
+    &-thumbnail {
+        display: block;
+        width: 180px;
+        object-fit: cover;
     }
 }
-.info-sides {
-    margin-left: 8px;
-    &-item {
-        display: flex;
-        color: white;
-        span {
-            margin-right: 16px;
-            color: var(--text-color);
-        }
+@media (max-width: $mobile) {
+    .detail-header{
+        height: 300px;
     }
+    .detail-header-bg{
+        height: 300px;
+
+    }
+    .header-content-thumbnail{
+        width: 110px;
+    }
+}
+
+@media (min-width: $tablet) and (max-width: 1023px) {
+    // Styles cho tablet
 }

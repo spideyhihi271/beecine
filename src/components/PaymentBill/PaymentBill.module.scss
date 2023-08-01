@@ -47,3 +47,20 @@
         }
     }
 }
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media (min-width: $desktop){
+    
+}
+@media (max-width: $mobile) {
+    .bill{
+        width: 100%;
+    }
+
+    .bill-title{
+        font-size: 24px;
+        margin-top: 24px;
+    }
+}

@@ -42,3 +42,24 @@
 .unspace {
     margin: 4px 0;
 }
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media (min-width: $desktop){
+    
+}
+@media (max-width: $mobile) {
+    .input {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .input-info{
+        display: block;
+        width: 100%;
+
+    }
+}
+

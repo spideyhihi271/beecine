@@ -1,0 +1,89 @@
+footer {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .footer-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .footer-columns {
+    display: flex;
+    justify-content: space-between; 
+  }
+  
+  .footer-column {
+    width: calc(100% / 4);
+  }
+
+  .footer-column ul{
+    line-height: 32px;
+  }
+
+  .footer-column li{
+    list-style: none;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    color: #fff; 
+  }
+  
+  .footer-links a {
+    color: #ccc;
+  }
+  
+  
+  /* Phần footer contact */
+  
+  .footer-contact {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .footer-columns {
+    align-items: center; 
+  }
+  
+  .footer-column {
+    flex: 1;
+  }
+  
+  .footer-column span {
+    color: #666; 
+  }
+
+@media (max-width: 480px) {
+  .footer-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 1% var(--content-sesson-padding);
+    width: 100%;
+  }
+  
+  .footer-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;  
+  }
+  
+  .footer-column {
+    width: 140px;
+    font-size: 14px;
+  }
+  .footer-links{
+    margin-bottom: 0px !important;
+  }
+
+  .footer-logo{
+    width: 120px;
+  }
+}

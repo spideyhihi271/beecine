@@ -4,11 +4,38 @@
 }
 .flex-layout {
     display: flex;
-    height: 300px;
+    height: 600px;
     &-aside {
         width: fit-content;
     }
     &-main {
         width: fit-content;
     }
+}
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media (min-width: $desktop){
+    
+}
+@media (max-width: $mobile) {
+    .wrapper {
+        margin-top: var(--header-session-h);
+        padding: 1% var(--content-sesson-padding);
+    }
+    .flex-layout{
+        display: flex;
+        flex-direction: column;
+        height: 1024px;
+    }
+    .flex-layout-aside{
+        width: 100%;
+    }
+    .flex-layout-main{
+        width: 100%;
+    }
+
+
 }

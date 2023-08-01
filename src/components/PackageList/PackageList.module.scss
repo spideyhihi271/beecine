@@ -1,3 +1,6 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
 .wrapper {
     margin-top: var(--header-session-h);
     padding: 1% var(--content-sesson-padding);
@@ -75,4 +78,120 @@
         font-size: 1.3rem;
         margin: 4px 0;
     }
+}
+
+@media (max-width: $mobile) {
+    .header-logo-nav {
+        position: relative;
+    }
+
+    .iconMenu {
+        position: absolute;
+        top: 13px;
+        left: -24px;
+        transform: translateY(-50%);
+        font-size: 24px;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0);
+        color: aliceblue;
+    }
+
+    .logo {
+        width: 80px;
+        margin-left: 32px;
+        margin-top: 4px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin: 64px 32px;
+    }
+
+    .actions {
+        margin-left: -32px;
+    }
+
+    .navModule {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    .navMobile {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 30%;
+        background-color: #000;
+        border-radius: 8px;
+        animation: slideIn;
+        animation-duration: 1s;
+    }
+
+    .nav-list-item {
+        color: #fff;
+        margin: 12px 0;
+
+        &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-decoration: underline;
+        }
+    }
+
+    .actions{
+        padding: 0 20px;
+    }
+
+    @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);  
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes slideOut {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+}
+@media (max-width: $mobile) {
+    .package-title{
+        font-size: 20px;
+    }
+    .package-description{
+        font-size: 10px;
+    }
+    .package-list{
+        display: block; 
+        width: 100%;
+        display: grid;
+  grid-template-columns: 100%;
+  display: flex;
+  flex-flow: column; 
+    }
+    .package-item{
+        display: block; 
+        width: 100%;
+        flex-basis: 100%
+    }
+}
+@media (min-width: $tablet) and (max-width: 1023px) {
+    // Styles cho tablet
 }

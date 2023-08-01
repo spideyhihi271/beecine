@@ -94,3 +94,30 @@
         cursor: pointer;
     }
 }
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media (max-width: $mobile) {
+    .auth-form{
+        width: 100%;
+    }
+
+    .auth-form-main{
+        width: 100%;
+    }
+
+    .signin-title{
+        width: 100%;
+        font-size: 24px;
+    }
+    .signin-description{
+        font-size: 12px;
+    }
+    .signin-box{
+        display: flex;
+        flex-direction: column;
+    }
+}
+  

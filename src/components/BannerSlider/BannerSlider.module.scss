@@ -1,3 +1,7 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
 :root {
     --banner-spacing: 100px;
 }
@@ -7,15 +11,7 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    &-filter {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: 0.6);
-    }
+
     &-bg {
         position: absolute;
         top: 0;
@@ -25,6 +21,7 @@
         height: 100%;
         object-fit: cover;
     }
+
     &-content {
         position: absolute;
         top: 35%;
@@ -37,109 +34,122 @@
 
 .banner-content {
     color: white;
+
     &-rating {
         display: flex;
         align-items: flex-end;
         font-size: 2.5rem;
         margin-bottom: var(--banner-spacing);
+
         b {
             color: var(--main-color);
             margin: 0 8px;
             transform: translateY(15%);
         }
+
         span {
             font-size: 1.5rem;
         }
     }
 }
+
 .line {
     width: 2px;
     height: 10px;
     background-color: white;
     margin: 0 8px;
 }
+
 .info {
     &-genders {
         display: flex;
         align-items: center;
+
         p {
             font-weight: bold;
         }
     }
+
     &-name {
         font-size: 5rem;
         font-weight: bolder;
     }
+
     &-more {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         font-size: 1.4rem;
+
         b {
             margin-right: 8px;
         }
+
         span {
             color: var(--text-color);
             margin-right: 8px;
         }
     }
+
     &-description {
         color: var(--text-color);
         font-size: 1.4rem;
         margin: 8px 0;
     }
-    &-actions {
-        display: flex;
-    }
 }
 
-// Nav Slider
-.nav-slider {
-    position: absolute;
-    bottom: var(--banner-spacing);
-    right: var(--banner-spacing);
-    z-index: 5;
-    &-header {
+// responsive
+@media (max-width: $mobile) {
+    .banner {
+        position: relative;
+        height: 260px;
+        top: 0;
+        left: 0;
+    }
+
+    .banner-bg {
+        width: 100%;
+        height: 260px;
+    }
+
+    .banner-content {
+        position: absolute;
+        top: 68%;
+        left: -100px;
+        z-index: 1;
+        width: 40%;
+    }
+
+    .banner-content-rating {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-    }
-}
-.nav-header-title {
-    color: white;
-}
-.nav-header-actions {
-    display: flex;
-    button {
-        margin-left: 8px;
-        color: var(--text-color);
-        background-color: transparent;
-        cursor: pointer;
-        transition: all ease-in-out 0.3s;
-        &:hover {
-            color: white;
-        }
-    }
-}
-.nav-slider-list {
-    display: flex;
-    width: fit-content;
-    margin: 16px 0;
-}
-.nav-slider-item {
-    width: 120px;
-    overflow: hidden;
-    margin: 0 4px;
-    &:first-child {
-        transform: scale(1.1);
-        margin-right: 10px;
-    }
-    img {
-        width: 100%;
-    }
-    p {
         font-size: 1.5rem;
-        text-align: center;
-        color: white;
+        margin-left: 28px;
+        line-height: 0px;
+
     }
+
+    .info {
+        position: absolute;
+        top: 8%;
+        left: 128px;
+        display: flex;
+    }
+    .info-genders{
+        font-size: 8px;
+    }
+    .info-name{
+        font-size: 8px;
+    }
+    .info-more{
+        display: none;
+    }
+    .info-description{
+        display: none;
+    }
+
+}
+
+@media (min-width: $tablet) and (max-width: 1023px) {
+    // Styles cho tablet
 }

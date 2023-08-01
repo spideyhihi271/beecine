@@ -58,3 +58,43 @@
         border: none;
     }
 }
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media (min-width: $desktop){
+    
+}
+@media (max-width: $mobile) {
+    .profile-content{
+        width: 100%;
+        text-align: left;
+    }
+    .wrapper{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .general-info-more{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .profile-general-title{
+        margin-top: 52px;
+        font-size: 20px;
+    }
+    .profile-general-item{
+        height: 56px;
+    }
+    .profile-key{
+        margin-top: 12px;
+    }
+    .general-change{
+        width: 50px;
+        margin-top: 36px;
+    }
+    .general-info-name{
+        font-size: 16px;
+    }
+
+}

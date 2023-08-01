@@ -27,3 +27,20 @@
         }
     }
 }
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+@media (min-width: $desktop){
+    
+}
+@media (max-width: $mobile) {
+    .payment-form{
+        width: 100%;
+    }
+    .payment-form-title{
+        font-size: 24px;
+    }
+}
+
